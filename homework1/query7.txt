@@ -1,0 +1,36 @@
+Query 7
+Determine School Location
+
+Marshall USC map
+
+First 5 results from Google
+URL: http://www-marshall.usc.edu/marketing/maps-and-directions.htm
+Relevance: 1
+
+URL: http://www.marshall.usc.edu/
+Relevance: 0
+
+URL: https://www.marshall.usc.edu/undergrad/buad/passion
+Relevance: 0
+
+URL: http://hospitality.usc.edu/dining-map/
+Relevance: 0
+
+URL: http://students.marshall.usc.edu/undergrad/advising/sample-course-plans/
+Relevance: 0
+
+First 5 results from Bing
+URL: http://web-app.usc.edu/maps/
+Relevance: 1
+
+URL: http://classic.marshall.usc.edu/marketing/maps-and-directions.htm
+Relevance: 1
+
+URL: http://students.marshall.usc.edu/undergrad/international-programs/iep/marshall-students-studying-abroad/marshall-google-map/
+Relevance: 0
+
+URL: https://www.marshall.usc.edu/
+Relevance: 0
+
+URL: http://stage.marshall.usc.edu/cmc/sitemap.htm
+Relevance: 0

@@ -1,0 +1,36 @@
+Query 9
+Determine School Alumni News web page
+
+USC Marshall Alumni
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/alumni
+Relevance: 1
+
+URL: https://www.marshall.usc.edu/alumni/chapters/los_angeles
+Relevance: 1
+
+URL: https://thenetwork.usc.edu/aboutmaa
+Relevance: 1
+
+URL: http://classic.marshall.usc.edu/alumni/
+Relevance: 1
+
+URL: https://en.wikipedia.org/wiki/USC_Marshall_School_of_Business
+Relevance: 0.25
+
+First 5 results from Bing
+URL: http://www.marshall.usc.edu/alumni
+Relevance: 1
+
+URL: http://www-marshall.usc.edu/alumni/
+Relevance: 1
+
+URL: http://thenetwork.usc.edu/alumni
+Relevance: 1
+
+URL: https://alumni.usc.edu/campus/
+Relevance: 0
+
+URL: https://thenetwork.usc.edu/
+Relevance: 1

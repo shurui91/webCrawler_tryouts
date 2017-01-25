@@ -1,0 +1,36 @@
+Query 8
+Determine the Founder
+
+Gordon Marshall
+
+First 5 results from Google
+URL: https://en.wikipedia.org/wiki/Gordon_S._Marshall
+Relevance: 1
+
+URL: http://www.latimes.com/local/obituaries/la-me-0604-gordon-marshall-20150603-story.html
+Relevance: 1
+
+URL: https://news.usc.edu/82292/usc-trustee-and-electronics-entrepreneur-gordon-s-marshall-95/
+Relevance: 1
+
+URL: http://www.uclabruins.com/roster.aspx?rp_id=1250
+Relevance: 0
+
+URL: http://www.pasadenastarnews.com/obituaries/20150604/usc-trustee-gordon-marshall-95-dies-in-pasadena
+Relevance: 1
+
+First 5 results from Bing
+URL: https://en.wikipedia.org/wiki/Gordon_Marshall_(sociologist)
+Relevance: 0
+
+URL: https://en.wikipedia.org/wiki/Gordon_Marshall_(footballer,_born_1964)
+Relevance: 0
+
+URL: https://www.healthgrades.com/physician/dr-gordon-marshall-xwrdt
+Relevance: 0
+
+URL: http://www.marshall.usc.edu/videos/happy-birthday-gordon-marshall
+Relevance: 0.5
+
+URL: http://www.latimes.com/local/obituaries/la-me-0604-gordon-marshall-20150603-story.html
+Relevance: 1

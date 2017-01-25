@@ -5,8 +5,9 @@ USC ID Number: xxxx-xxxx-70
 Since my USC ID ends up with 70, my homework will be done with information about Marshall School of Business
 
 **********
-Faculty Names
 Query 1
+Faculty Names
+
 Scott Abrams Marshall
 
 First 5 results from Google
