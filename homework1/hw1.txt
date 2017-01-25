@@ -1,0 +1,125 @@
+CSCI572 Homework Assignment 1
+Name: Shurui Liu
+USC ID Number: xxxx-xxxx-70
+
+Since my USC ID ends up with 70, my homework will be done with information about Marshall School of Business
+
+**********
+Faculty Names
+Query 1
+Scott Abrams Marshall
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/faculty/directory/sabrams-0
+Relevance = 1
+
+URL: https://www.marshall.usc.edu/faculty/directory/sabrams
+Relevance = 1
+
+URL: https://www.linkedin.com/in/scott-abrams-2b1458
+Relevance = 1
+
+URL: http://poetsandquantsforundergrads.com/2016/02/15/top-business-majors-name-their-favorite-professors/4/
+Relevance = 0.25
+
+URL: https://us.sagepub.com/en-us/nam/author/scott-r-abrams
+Relevance = 0
+
+First 5 results from Bing
+URL: http://www.marshall.usc.edu/faculty/directory/sabrams
+Relevance = 1
+
+URL: https://www.marshall.usc.edu/faculty/directory/sabrams-0
+Relevance = 1
+
+URL: https://www.linkedin.com/in/scott-abrams-2b1458
+Relevance = 1
+
+URL: https://www.linkedin.com/pub/dir/scott/abrams
+Relevance = 0.25
+
+URL: http://students.marshall.usc.edu/cis/files/2012/05/SIF2017-Information_Session.pdf
+Relevance = 0.25
+
+
+**********
+Query 2
+Jack Barcal Marshall
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/faculty/directory/jbarcal
+Relevance: 1
+
+URL: http://www.marshall.usc.edu/node/28488
+Relevance: 0.25
+
+URL: https://www.facebook.com/USCLawCLE/posts/736566983051196
+Relevance: 0.25
+
+URL: https://prezi.com/09m9mwxtyi9v/marshall/
+Relevance: 0.25
+
+URL: http://www.zollalaw.com/wp-content/uploads/archive/pdf/events-usc-brochure.pdf
+Relevance: 0.25
+
+First 5 results from Bing
+URL: https://www.marshall.usc.edu/faculty/directory/jbarcal
+Relevance: 1
+
+URL: http://www.marshall.usc.edu/node/28488
+Relevance: 0.25
+
+URL: http://weblaw.usc.edu/why/academics/cle/te/assets/docs/TEC15%20Brochure.pdf
+Relevance: 0.25
+
+URL: http://waatp.com/people/jack-barcal/47637469/
+Relevance: 0
+
+URL: http://info.marshall.usc.edu/dept/marshallonline/Pages/News.aspx
+Relevance: 0.25
+
+
+**********
+Query 3
+Linda Hagen Marshall
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/faculty/directory/lindahagen
+Relevance: 1
+
+URL: http://www.linda-hagen.com/uploads/4/6/8/3/46831813/hagen_cvjune2016.pdf
+Relevance: 0.25
+
+URL: https://www.linkedin.com/in/linda-hagen-29a4b68a
+Relevance: 0.25
+
+URL: https://www.linkedin.com/in/linda-hagen-b3401983
+Relevance: 0
+
+URL: https://www.linkedin.com/in/linda-hagen-9b172b1a
+Relevance: 0
+
+First 5 results from Bing
+URL: http://www.marshall.usc.edu/faculty/directory/lindahagen
+Relevance: 1
+
+URL: http://www.linda-hagen.com/
+Relevance: 1
+
+URL: https://www.linkedin.com/in/linda-hagen-29a4b68a
+Relevance: 0.25
+
+URL: https://msbfile03.usc.edu/digitalmeasures/ahagen/pci/Hagen_CVDec2016-1.pdf
+Relevance: 0.25
+
+URL: https://msbfile03.usc.edu/digitalmeasures/ahagen/pci/Hagen%20Linda-1.pdf
+Relevance: 0
+
+
+**********
+Department Names
+Query 4
+
+Query 5
+
+Query 6
