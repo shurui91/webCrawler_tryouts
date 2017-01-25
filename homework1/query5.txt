@@ -1,0 +1,35 @@
+Department Names
+Query 5
+Marketing Marshall
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/faculty/marketing
+Relevance: 1
+
+URL: https://www.marshall.usc.edu/faculty/marketing/faculty
+Relevance: 0.5
+
+URL: http://www.marshall.usc.edu/Msmkt/overview
+Relevance: 0.5
+
+URL: https://www.marshall.usc.edu/faculty/marketing/programs/msmkt
+Relevance: 0.5
+
+URL: http://www.marshallmarketingusa.com/
+Relevance: 0
+
+First 5 results from Bing
+URL: https://www.marshall.usc.edu/faculty/marketing
+Relevance: 1
+
+URL: http://www.marshallmarketingusa.com/
+Relevance: 0
+
+URL: http://www.yellowpages.com/marshall-mi/marketing
+Relevance: 0
+
+URL: https://www.marshall.usc.edu/faculty/marketing/research
+Relevance: 0.5
+
+URL: http://classic.marshall.usc.edu/marketing/about/about.htm
+Relevance: 0.5

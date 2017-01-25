@@ -1,0 +1,35 @@
+Department Names
+Query 6
+Data Sciences and Operations Marshall
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/faculty/iom
+Relevance: 1
+
+URL: https://www.marshall.usc.edu/faculty/iom/faculty
+Relevance: 0.5
+
+URL: https://www.marshall.usc.edu/faculty/iom/contact
+Relevance: 0.5
+
+URL: http://students.marshall.usc.edu/iom/
+Relevance: 0.5
+
+URL: https://www.marshall.usc.edu/faculty/iom/curriculum
+Relevance: 0.5
+
+First 5 results from Bing
+URL: http://www.marshall.usc.edu/faculty/iom/about
+Relevance: 0.5
+
+URL: http://www.marshall.usc.edu/faculty/iom
+Relevance: 1
+
+URL: https://students.marshall.usc.edu/iom/contact-us/
+Relevance: 0.5
+
+URL: http://students.marshall.usc.edu/iom/
+Relevance: 0.5
+
+URL: http://web-app.usc.edu/ws/soc_archive/soc/term-20153/classes/dso/
+Relevance: 0.5

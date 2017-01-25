@@ -1,0 +1,35 @@
+Faculty Names
+Query 2
+Jack Barcal Marshall
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/faculty/directory/jbarcal
+Relevance: 1
+
+URL: http://www.marshall.usc.edu/node/28488
+Relevance: 0.25
+
+URL: https://www.facebook.com/USCLawCLE/posts/736566983051196
+Relevance: 0.25
+
+URL: https://prezi.com/09m9mwxtyi9v/marshall/
+Relevance: 0.25
+
+URL: http://www.zollalaw.com/wp-content/uploads/archive/pdf/events-usc-brochure.pdf
+Relevance: 0.25
+
+First 5 results from Bing
+URL: https://www.marshall.usc.edu/faculty/directory/jbarcal
+Relevance: 1
+
+URL: http://www.marshall.usc.edu/node/28488
+Relevance: 0.25
+
+URL: http://weblaw.usc.edu/why/academics/cle/te/assets/docs/TEC15%20Brochure.pdf
+Relevance: 0.25
+
+URL: http://waatp.com/people/jack-barcal/47637469/
+Relevance: 0
+
+URL: http://info.marshall.usc.edu/dept/marshallonline/Pages/News.aspx
+Relevance: 0.25

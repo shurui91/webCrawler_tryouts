@@ -1,0 +1,35 @@
+Faculty Names
+Query 3
+Linda Hagen Marshall
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/faculty/directory/lindahagen
+Relevance: 1
+
+URL: http://www.linda-hagen.com/uploads/4/6/8/3/46831813/hagen_cvjune2016.pdf
+Relevance: 0.25
+
+URL: https://www.linkedin.com/in/linda-hagen-29a4b68a
+Relevance: 0.25
+
+URL: https://www.linkedin.com/in/linda-hagen-b3401983
+Relevance: 0
+
+URL: https://www.linkedin.com/in/linda-hagen-9b172b1a
+Relevance: 0
+
+First 5 results from Bing
+URL: http://www.marshall.usc.edu/faculty/directory/lindahagen
+Relevance: 1
+
+URL: http://www.linda-hagen.com/
+Relevance: 1
+
+URL: https://www.linkedin.com/in/linda-hagen-29a4b68a
+Relevance: 0.25
+
+URL: https://msbfile03.usc.edu/digitalmeasures/ahagen/pci/Hagen_CVDec2016-1.pdf
+Relevance: 0.25
+
+URL: https://msbfile03.usc.edu/digitalmeasures/ahagen/pci/Hagen%20Linda-1.pdf
+Relevance: 0

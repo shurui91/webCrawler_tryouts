@@ -1,0 +1,35 @@
+Department Names
+Query 4
+Accounting Marshall
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/faculty/leventhal
+Relevance: 1
+
+URL: https://www.marshall.usc.edu/undergrad/acct
+Relevance: 0.5
+
+URL: https://www.marshall.usc.edu/faculty/leventhal/faculty
+Relevance: 0.5
+
+URL: https://www.marshall.usc.edu/macc
+Relevance: 0.5
+
+URL: http://www.marshall.edu/cob/accounting/
+Relevance: 0
+
+First 5 results from Bing
+URL: https://www.marshall.usc.edu/faculty/leventhal
+Relevance: 1
+
+URL: http://www.marshall.usc.edu/undergrad/acct
+Relevance: 0.5
+
+URL: https://www.monster.com/jobs/q-accounting-jobs-l-marshall,-mn.aspx
+Relevance: 0
+
+URL: http://accountingflorida.com/
+Relevance: 0
+
+URL: http://www.marshallcpas.com/
+Relevance: 0

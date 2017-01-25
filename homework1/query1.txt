@@ -1,0 +1,42 @@
+CSCI572 Homework Assignment 1
+Name: Shurui Liu
+USC ID Number: xxxx-xxxx-70
+
+Since my USC ID ends up with 70, my homework will be done with information about Marshall School of Business
+
+**********
+Faculty Names
+Query 1
+Scott Abrams Marshall
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/faculty/directory/sabrams-0
+Relevance = 1
+
+URL: https://www.marshall.usc.edu/faculty/directory/sabrams
+Relevance = 1
+
+URL: https://www.linkedin.com/in/scott-abrams-2b1458
+Relevance = 1
+
+URL: http://poetsandquantsforundergrads.com/2016/02/15/top-business-majors-name-their-favorite-professors/4/
+Relevance = 0.25
+
+URL: https://us.sagepub.com/en-us/nam/author/scott-r-abrams
+Relevance = 0
+
+First 5 results from Bing
+URL: http://www.marshall.usc.edu/faculty/directory/sabrams
+Relevance = 1
+
+URL: https://www.marshall.usc.edu/faculty/directory/sabrams-0
+Relevance = 1
+
+URL: https://www.linkedin.com/in/scott-abrams-2b1458
+Relevance = 1
+
+URL: https://www.linkedin.com/pub/dir/scott/abrams
+Relevance = 0.25
+
+URL: http://students.marshall.usc.edu/cis/files/2012/05/SIF2017-Information_Session.pdf
+Relevance = 0.25
