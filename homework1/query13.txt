@@ -1,0 +1,36 @@
+Query 13
+A customized query about USC Marshall
+
+My query is "usc marshall job secret"
+
+First 5 results from Google
+URL: https://www.marshall.usc.edu/mbacareer/recruiters
+Relevance: 0.5
+
+URL: http://www.marshall.usc.edu/MSMkt/career-resources
+Relevance: 0.25
+
+URL: http://www.forbes.com/colleges/university-of-southern-california/marshall-school-of-business/
+Relevance: 1
+
+URL: https://en.wikipedia.org/wiki/USC_Marshall_School_of_Business
+Relevance: 0.5
+
+URL: https://www.eventbrite.com/e/usc-marshall-alumni-san-diego-career-panel-the-labor-market-navigating-career-change-and-managing-tickets-31227326775
+Relevance: 0.5
+
+First 5 results from Bing
+URL: http://www.marshall.usc.edu/
+Relevance: 0.25
+
+URL: http://www.marshall.usc.edu/feeds/all
+Relevance: 0
+
+URL: http://thenetwork.usc.edu/jobboard
+Relevance: 0.5
+
+URL: https://www.linkedin.com/jobs/usc-marshall-jobs
+Relevance: 0.25
+
+URL: https://www.glassdoor.com/Reviews/USC-Marshall-Reviews-E498138.htm
+Relevance: 0.5
