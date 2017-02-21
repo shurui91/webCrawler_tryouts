@@ -27,6 +27,10 @@ public class MyCrawler extends WebCrawler {
 				&& href.startsWith("http://www.abcnews.go.com/");
 	}
 	
+	/**
+     * This function is called when a page is fetched and ready
+     * to be processed by your program.
+     */
 	@Override
 	public void visit(Page page) {
 		String url = page.getWebURL().getURL();
