@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>ABCNews.com | Mobile Web Feedback</title>
+
+	<meta name="apple-itunes-app" content="app-id=300255638">
+
+	<meta name="keyword" content="ABC News, breaking news, headline news, latest news, top news, online news, video news, world news, national news, abc news, abcnews, abc news online, online news, breaking news, headline news, news articles, local news, us news, world news, online news, abc news, abcnews, abc news online">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<link rel="stylesheet" type="text/css" href="http://a.abcnews.com/assets/css/feedback_mobile_web.css?v=2">
+
+</head>
+<body>
+	<div class="header">
+		<div id="logo"><div class="logo_version"><!-- image --></div></div>
+	</div>
+
+	<div class="container">
+		
+		<div class="maincontainer">
+
+			<div class="error-view">
+				<a href="#" class="close-btn">X</a>
+				<div class="error-contents"></div>
+			</div>
+		
+			<div class="pageHeader">
+				ABC News Phone Site Feedback
+			</div>
+
+			
+
+				<form onsubmit="return validate(this);" action="http://app.abcnews.go.com/affiliateemails/Entry" method="POST">
+
+					<div class="entry-message">
+						ABC News would love to hear from you! Please help us improve our by taking a moment to share your feedback on our site:
+					</div>
+
+					<div class="entry-message" id="commentLimitWarning">(2000 characters remaining)</div>
+
+					<textarea placeholder="Enter your comment..." maxlength="2000" id="Comment" name="Comment" onKeyDown="limitTextDisplay(this,2000,'commentLimitWarning');" onKeyUp="limitTextDisplay(this,2000,'commentLimitWarning');"></textarea>
+
+					<div class="email-container">
+
+							<div id="EmailAddressTitle">Your email address <span class="required">(required)</span></div> <input type="text" id="EmailAddress" name="EmailAddress" onKeyDown="limitText(this,64);" onKeyUp="limitText(this,64);"/>
+
+						</div>
+						<div class="_clr"></div>
+
+						<div class="button-container">
+							<input class="submit" type="submit" name="submitButton" value="Submit" />
+						</div>
+
+						<input type="hidden" name="action" value="Add"/>
+						<input type="hidden" name="classID" value="10"/>
+						<input type="hidden" name="source" value="TabletWebFeedack"/>
+						<input type="hidden" name="redirectUrl" value="http://abcnews.go.com/custom/feedback_form_mobileweb"/>
+
+					</div>
+				</form>
+
+				
+
+
+		</div>
+	</div>
+
+<script src="http://a.abcnews.com/assets/js/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://a.abcnews.com/assets/tablet/js/plugins/feedback.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#Comment").focus(function() {
+		$(this).removeClass('hasRed');
+	})
+
+	$("#EmailAddress").focus(function() {
+		$(this).removeClass('hasRed');
+	});
+
+	$(".close-btn").click(function() {
+		$(".error-view").slideUp();
+	})
+});
+</script>
+</body>
+</html>

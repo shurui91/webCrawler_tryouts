@@ -1,0 +1,52 @@
+Name: Shurui Liu
+
+USC ID: xxxxxxxx
+
+News site crawled: abcnews.go.com
+
+
+Fetch Statistics
+=====================
+fetches attempted: 200
+
+fetched succeeded: 185
+
+fetched aborted: 10
+
+fetched failed: 0
+
+
+Outgoing URLs
+=====================
+Total URLS extracted: 6172
+
+# unique URLs extracted: 3914
+
+# unique URLs within News Site: 2771
+
+# unique URLs outside News Site: 1143
+
+
+Status Codes
+=====================
+200 OK: 190
+301 Moved Permanently: 3
+302 Found: 7
+
+File Size
+=====================
+< 1KB: 1
+
+1KB ~ <10KB: 0
+
+10KB ~ <100KB: 157
+
+100KB ~ <1MB: 27
+
+>= 1MB: 0
+
+
+Content Types
+=====================
+text/html: 184
+

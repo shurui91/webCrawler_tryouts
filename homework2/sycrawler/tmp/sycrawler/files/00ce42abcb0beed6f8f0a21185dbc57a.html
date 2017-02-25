@@ -1,0 +1,255 @@
+
+
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head>
+<title>Introducing the ABC News App for iPad&reg;</title>
+<link type="text/css" media="screen" rel="stylesheet" href="http://a.abcnews.com/assets/css/colorbox.css" />
+<script type="text/javascript" src="http://a.abcnews.com/assets/js/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://a.abcnews.com/assets/js/jquery/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="http://a.abcnews.com/assets/js/jquery/jquery.colorbox.js"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=abcnews"></script>
+<script type="text/javascript" src="http://a.abcnews.com/assets/js/abcnews-share.js"></script>
+<link type="text/css" rel="stylesheet" media="screen, print" href="http://a.abcnews.com/assets/css/ipadmicrositev2.css?v=3" />
+
+
+<meta property="og:title" content="Introducing the ABC News App for iPad&reg;" />
+<meta property="og:description" content="See The Whole Picture on the ABC News App for iPad&reg;.  Get a dynamic, around the clock look at the news as it breaks with morning, afternoon and evening editions. View the news like never before, how and when you want it." />
+<meta property="og:image" content="http://a.abcnews.com/assets/images/ipad/v3/3.jpg" />
+
+<script type="text/javascript">
+//iPad detect
+
+var iPadAgent = false;
+	if ((navigator.userAgent.indexOf('iPad') != -1)) {
+	    try {
+	        localStorage.setItem('ipadPromoViewed','true');
+	    }
+	    catch(e) {
+	        if (e==QUOTA_EXCEEDED_ERR){
+	            localStorage.removeItem('ipadPromoViewed');
+	            localStorage.setItem('ipadPromoViewed','true');
+	        }
+	    }
+		iPadAgent = true;		
+	}
+
+var deviceType = (iPadAgent ? 'ipad' : 'site');
+$(document).ready(function(){
+if(iPadAgent == true){
+$('body').attr("style","margin:0 20px;")
+$('.siteLink').html("<a href=\"http://abcnews.go.com/t/index\" name=\"lpos=ipad_microsite&lid=[optimizedSite]\">GO TO THE IPAD OPTIMIZED VERSION OF ABCNEWS.COM ></a>")
+$('#Logo>a').attr("href","http://abcnews.go.com/t/index");
+$('#cboxOverlay').css("height", document.height);
+$('#cboxOverlay').css("width", document.width);
+$("a.appVideo").attr("href", "/video/portableSFP?version=&affil=null&cid=null&autoStart=null&adPattern=null&size=inpage&id=16568034&ipad=true")
+}
+else
+{
+$('.siteLink').html("<a href=\"http://www.abcnews.go.com/\" name=\"lpos=ipad_microsite&lid=[regularSite]\">GO TO ABCNEWS.COM ></a>");
+$('#Logo>a').attr("href","http://abcnews.go.com/");
+}
+
+$('#slideshow').attr("style","display:block;");
+
+				var $container = $('#slideshow').cycle({
+					fx:      'scrollHorz',
+					prev:    '#prev',
+					next:    '#next',
+					slideExpr: 'img',
+					after:	 onAfter,
+					timeoutFn: calculateTimeout 
+				});				
+			
+
+			function calculateTimeout(currElement, nextElement, opts, isForward) { 
+				var timeouts = [3,8,8,8,8,8,8,8]; 
+				var index = opts.currSlide; 
+				return timeouts[index] * 1000; 
+			} 
+
+		function onAfter(curr, next, opts) {
+			var index = opts.currSlide;
+			$('#prev')[index == 0 ? 'hide' : 'show']();
+			$('#next')[index == opts.slideCount - 1 ? 'hide' : 'show']();
+				
+			
+		}
+$(".appVideo").colorbox({
+		innerWidth:"638",
+		innerHeight:"460",
+		iframe:true,
+		scrolling:false,
+		opacity:0.75,
+		overlayClose:true		
+		});
+
+		
+}); 
+
+</script>
+
+
+</head>
+<body>
+<div id="Wrapper">
+<div id="Header">
+<div id="Logo"><a href="#" name="lpos=ipad_microsite&lid=[Logo]"><img src="http://a.abcnews.com/assets/images/ipad/abcnewslogo_header.gif" alt="ABC News" /></a></div>
+<div id="CallToAction"><p class="siteLink"></p></div>
+<div class="clearboth"><!--empty--></div>
+</div>
+<div id="Contents">
+		  	<div id="sharebar-placeholder"><img src="http://a.abcnews.com/assets/images/ipad/share_bar.png"/></div>
+			<div id="socialToolkit">
+			<div class="share-container">	
+				<a class="addthis_button_facebook_like"></a>  
+			</div>
+			<script type="text/javascript">			
+			var addthis_share =
+			{
+				url: 'http://abcnews.go.com/ipad', //override window url
+				title: '', //override window title
+				description: '' //optional
+			}		
+			var share = new shareNewsObj();
+			share.options = {renderDiv:'share-otus', //target div
+								plusOneConfig: 'g:plusone:size="medium"',
+								share: [{title:'', items: [{code:'addthis_button_tweet',name:'Tweet',label:false},
+								{code:'addthis_button_linkedin_counter', name:'LinkedIn','label':false},{code:'addthis_button_google_plusone',name:'Google',label:false}]}]};
+			share.render();
+			</script>				
+		</div>
+<div id="TopBlurbs">
+<div id="label"><!--empty--></div>
+<h1>ABC News App for iPad&reg;: <span>See The Whole Picture.</span></h1>
+</div>
+		<div id="appStoreBlurbs"><a href="http://itunes.apple.com/us/app/abc-news-for-ipad/id380520716?mt=8" name="lpos=ipad_microsite&lid=[appstore]" target="_blank"><img src="http://a.abcnews.com/assets/images/ipad/appstore_icon.png" id="appStore" alt="Available on the App Store" /></a></div>	
+	<div id="iPadContainer">
+	<div class="arrow left" style="float:left;"><a href="#" name="Previous"><span id="prev"></span></a></div>
+	<div id="slideShowContainer">
+		<div id="slideshow" class="pics">
+			<img src="http://a.abcnews.com/assets/images/ipad/v3/1_rev.jpg" width="435" height="580" alt="The NEW ABC News iPad App"/>
+			<img src="http://a.abcnews.com/assets/images/ipad/v3/2_rev.jpg" width="435" height="580" alt="The NEW ABC News iPad App"/>
+			<img src="http://a.abcnews.com/assets/images/ipad/v3/3.jpg" width="435" height="580" alt="The NEW ABC News iPad App"/>
+			<img src="http://a.abcnews.com/assets/images/ipad/v3/4.jpg" width="435" height="580" alt="The NEW ABC News iPad App"/>
+			<img src="http://a.abcnews.com/assets/images/ipad/v3/5.jpg" width="435" height="580" alt="The NEW ABC News iPad App"/>
+			<img src="http://a.abcnews.com/assets/images/ipad/v3/6.jpg" width="435" height="580" alt="The NEW ABC News iPad App"/>
+			<img src="http://a.abcnews.com/assets/images/ipad/v3/7_rev.jpg" width="435" height="580" alt="The NEW ABC News iPad App"/>
+			<img src="http://a.abcnews.com/assets/images/ipad/v3/8.jpg" width="435" height="580" alt="The NEW ABC News iPad App"/>
+		</div>
+    </div>  
+	   		<div class="arrow right" style="float:right;"><a href="#" name="Next"><span id="next"></span></a></div>
+		</div>	
+	<div id="SideBlurbs">
+
+		<h2>Morning, Noon or Night</h2>
+		<p class="intro">See The Whole Picture on the ABC News App for iPad&reg;.  Get a dynamic, around the clock look at the news as it breaks with morning, afternoon and evening editions. View the news like never before, how and when you want it.</p>
+		<p><span class="gray">Top News: </span>Get the latest headlines from ABC News's top stories, videos and photos.</p>
+		<p><span class="gray">Trending Stories: </span>See the most popular and buzzed about stories of the day.</p>
+		<p><span class="gray">Breaking News Alerts: </span>Receive news as it breaks, wherever you are.</p>
+		<p><span class="gray">Engaging Video: </span>Lean back and watch the best news coverage of the day in the palm of your hands.</p>
+		<p><span class="gray">ABC News Shows: </span>Catch up on your favorite shows including Good Morning America, World News With Diane Sawyer, Nightline, 20/20, and This Week with George Stephanopoulos.</p>
+		<p><span class="gray">Weather: </span>Check current weather conditions as well as hourly and 3-day forecasts.</p>
+		<p><span class="gray">Local: </span>Get local news updates if located in one of eight major U.S. markets.</p>
+		<p class="demoCallout"><a class="appVideo" href="/video/portableSFP?version=&affil=null&cid=null&autoStart=null&adPattern=null&size=inpage&id=16568034">See the ABC News iPad App Preview ></a></p>
+         <a class="appVideo" href="/video/portableSFP?version=&affil=null&cid=null&autoStart=null&adPattern=null&size=inpage&id=16568034"><img src="http://a.abcnews.com/assets/images/ipad/ipad_demo_graphic_v3.jpg" alt="Demo Video" id="walkThrough"/></a>
+</div>
+<div id="footer">
+<div id="left">
+<h3>Help and Support</h3>
+<p>We want to hear from you. Send us an email with your <a href="http://abcnews.go.com/custom/feedback_form" target="_blank">feature requests</a>,  <a href="http://abcnews.go.com/custom/feedback_form" target="_blank">bug reports</a> or <a href="http://abcnews.go.com/custom/feedback_form" target="_blank">comments</a>.</p>
+<p class="notes">iPad is a trademark of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+<p class="siteLink"></p>
+
+</div>
+<div id="right">
+<a href="http://www.abc.com/ipad" target="_blank"><img src="http://a.abcnews.com/assets/images/ipad/abc_app_graphic.jpg" alt="See the ABC Player App" /></a>
+<span class="caption">One more way to watch your favorite ABC shows anywhere, any time.</span>
+<span id="abcPromo"><a href="http://www.abc.com/ipad" target="_blank"><img src="http://a.abcnews.com/assets/images/ipad/abclogo_seeapp.gif" alt="ABC" /></a><a href="http://www.abc.com/ipad" class="callOut" target="_blank">See the ABC Player App in action ></a></span>
+</div>
+</div>
+
+
+<div class="clearboth"><!--empty--></div>
+</div>
+<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+
+
+ <div id="fb-root"></div>
+ <script>
+function fbInit(){
+if(!window.fbLoaded || window.fbLoaded == undefined){
+		FB.init({
+		 	appId  : 'fa71b3ce3ced40d47a4850f185b245d9',
+		 	channelUrl: 'http://a.abcnews.go.com/assets/static/perm_cache/channel.html',
+		 	cookie: true,
+		 	xfbml  : true  // parse XFBML
+		});
+		fbLoaded = true;
+	}
+} 
+ </script>
+
+<script type="text/javascript">
+	var s1 = document.getElementsByTagName('SCRIPT')[0];
+	var d = document.createElement('SCRIPT');
+	d.type = 'text/javascript';
+	d.src = 'http://widgets.digg.com/buttons.js';
+	s1.parentNode.insertBefore(d, s1);
+</script>
+<script>
+
+	$(document).ready(function(){
+		setTimeout(shareFadeOut, 3000);
+	})
+	
+	function shareFadeOut(){
+		$('#sharebar-placeholder').remove();
+		$('#socialToolkit').show();
+	}
+	
+</script>
+
+
+<!-- SiteCatalyst code version: H.15.1 Copyright 1997-2007 Omniture, Inc. More info available at http://www.omniture.com -->
+<script language="JavaScript">
+var s_account = "wdgnewabcnewshtml5,wdgasec";
+</script>
+<script language="JavaScript" src="http://a.abcnews.com/assets/js/s_code.js"></script>
+<script language="JavaScript"><!--
+
+s_omni.pageName = "abcn:ipadmicrosite_" + deviceType; //content name
+s_omni.pageURL = ""; //content url
+s_omni.pageType = ""; //page type
+s_omni.server = window.document.location.hostname; //reporting domain
+s_omni.prop4 = "general"; //content type
+
+s_omni.prop1 = "abcn_promo"; //site name
+s_omni.channel = "abcn"; //level1
+s_omni.prop5   = ""; //level2
+s_omni.prop6   = ""; //content alternate section
+
+s_omni.prop13 = ""; //columnist
+s_omni.prop16 = "abcnews"; //source
+s_omni.prop18 = ""; //content id:content name
+
+
+s_omni.prop24 = "" //top story
+s_omni.prop25 = ""; //top video
+s_omni.prop26 = ""; //top slideshow
+
+s_omni.hier1 = "abcn"; //directory structure
+s_omni.eVar20 = s_omni.prop13; //columnist
+s_omni.eVar16 = s_omni.pageName; //content name conversion
+s_omni.eVar17 = s_omni.prop4+":"+s_omni.channel;
+
+var s_code=s_omni.t();if(s_code)document.write(s_code)
+//-->
+</script>
+<!-- End SiteCatalyst code version: H.15.1 -->
+</body>
+
+
+
+</html>
