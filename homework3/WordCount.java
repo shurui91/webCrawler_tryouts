@@ -12,6 +12,12 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class WordCount {
+
+	/*
+		JAVA_HOME is already set-up. Do not change this.
+		export PATH=${JAVA_HOME}/bin:${PATH}
+		export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+	*/
 	/*
 	This is the Mapper class. It extends the Hadoop's Mapper class.
 	This maps input key/value pairs to a set of intermediate(output) key/value pairs.
