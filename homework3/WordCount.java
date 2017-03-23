@@ -12,7 +12,6 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class WordCount {
-
 	/*
 		JAVA_HOME is already set-up. Do not change this.
 		export PATH=${JAVA_HOME}/bin:${PATH}
@@ -49,6 +48,7 @@ public class WordCount {
 					'word1' 1
 					'word2' 1
 				*/
+				// (key, values)
 				context.write(word, one);
 			}
 		}
@@ -62,12 +62,13 @@ public class WordCount {
 	And the output key is a Text and value is an IntWritable.
 	*/
 	public static class IntSumReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
+		// Integer
 		private IntWritable result = new IntWritable();
 		public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
 			int sum = 0;
 			/*
-			Iterates through all the values available with a key and add them together and give the
-			final result as the key and sum of its values
+				Iterates through all the values available with a key and add them together and give the
+				final result as the key and sum of its values
 			*/
 			for (IntWritable val : values) {
 				sum += val.get();

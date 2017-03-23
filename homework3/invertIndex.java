@@ -11,13 +11,17 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
+/*
+gs://dataproc-9ff91a0f-99d5-4d99-b3ae-4a0e23254573-us/JAR/invertedindex.jar
+gs://dataproc-9ff91a0f-99d5-4d99-b3ae-4a0e23254573-us/dev_data
+gs://dataproc-9ff91a0f-99d5-4d99-b3ae-4a0e23254573-us/output1
+*/
+/*
+	JAVA_HOME is already set-up. Do not change this.
+	export PATH=${JAVA_HOME}/bin:${PATH}
+	export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+*/
 public class InvertIndex {
-
-	/*
-		JAVA_HOME is already set-up. Do not change this.
-		export PATH=${JAVA_HOME}/bin:${PATH}
-		export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
-	*/
 	/*
 	This is the Mapper class. It extends the Hadoop's Mapper class.
 	This maps input key/value pairs to a set of intermediate(output) key/value pairs.
@@ -32,12 +36,24 @@ public class InvertIndex {
 		Here 'one' is the number of occurances of the 'word' and is set to the value 1 during the
 		Map process.
 		*/
-		private final static IntWritable one = new IntWritable(1);
+		/*
+			1. find all the docIds;
+			2. for each docId, find those words;
+			3. reduce
+		*/
+		// equals to integer
+		// private static IntWritable docId = new IntWritable(1);
+
+		// equals to string
 		private Text word = new Text();
 		public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
 			// reading input one line at a time and tokenizing.
 			String line = value.toString();
 			StringTokenizer itr = new StringTokenizer(line);
+
+			// get the first token, docID, it is a string
+			String id = itr.nextToken();
+			IntWritable docId = new IntWritable(Integer.parseInt(id));
 
 			// iterating through all the words avaliable in that line and forming the key value pair.
 			while (itr.hasMoreTokens()) {
@@ -45,11 +61,12 @@ public class InvertIndex {
 				/*
 				Sending to output collector(Context) which in-turn passes the output to Reducer,
 				The output is as follows:
-					'word1' 1
-					'word1' 1
-					'word2' 1
+					'word1' docId
+					'word1' docId
+					'word2' docId
 				*/
-				context.write(word, one);
+				// (key, values) for each document
+				context.write(word, docId);
 			}
 		}
 	}
@@ -62,9 +79,23 @@ public class InvertIndex {
 	And the output key is a Text and value is an IntWritable.
 	*/
 	public static class IntSumReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
+		
 		private IntWritable result = new IntWritable();
+
 		public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
 			int sum = 0;
+			// <docId, occurance of each word>
+			HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
+			for (IntWritable val : values) {
+				sum += val.get();
+			}
+			if (hmap.containsKey(docId)) {
+				hmap.get(docId)++;
+			}
+			else {
+				hmap.put(docId, 1);
+			}
+
 			/*
 			Iterates through all the values available with a key and add them together and give the
 			final result as the key and sum of its values
