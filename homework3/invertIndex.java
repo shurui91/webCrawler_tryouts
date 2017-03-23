@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.StringTokenizer;
+import java.util.HashMap;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -79,31 +80,28 @@ public class InvertIndex {
 	And the output key is a Text and value is an IntWritable.
 	*/
 	public static class IntSumReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
-		
+		// the values
 		private IntWritable result = new IntWritable();
-
 		public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
 			int sum = 0;
-			// <docId, occurance of each word>
+			// <docId, count>
 			HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
+			// for one key, check to see if its docId exists
+			// if exists, add 1
+			// if does not exists, make it to be 1
 			for (IntWritable val : values) {
-				sum += val.get();
-			}
-			if (hmap.containsKey(docId)) {
-				hmap.get(docId)++;
-			}
-			else {
-				hmap.put(docId, 1);
+				if (hmap.containsKey(val.get())) {
+					int count = hmap.get(val.get());
+					count++;
+				}
+				else {
+					hmap.put(val.get(), 1);
+				}
 			}
 
-			/*
-			Iterates through all the values available with a key and add them together and give the
-			final result as the key and sum of its values
-			*/
-			for (IntWritable val : values) {
-				sum += val.get();
-			}
-			result.set(sum);
+			// show hashmap result
+			// hmap.forEach((k, v) -> System.out.print(k + ": " + v));
+			result.set(hmap.forEach((k, v) -> System.out.print(k + ": " + v)));
 			context.write(key, result);
 		}
 	}
@@ -116,7 +114,7 @@ public class InvertIndex {
 
 		// creating a Hadoop job and assigning a job name for identification.
 		Configuration conf = new Configuration();
-		Job job = Job.getInstance(conf, "word count");
+		Job job = Job.getInstance(conf, "inverted index");
 		job.setJarByClass(InvertIndex.class);
 
 		// the HDFS input and output directories to be fetched from the Dataproc job submission console.
