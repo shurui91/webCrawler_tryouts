@@ -49,6 +49,7 @@ public class WordCount {
 					'word2' 1
 				*/
 				// (key, values)
+				// (Text, IntWritable)
 				context.write(word, one);
 			}
 		}
@@ -74,6 +75,7 @@ public class WordCount {
 				sum += val.get();
 			}
 			result.set(sum);
+			// (Text, IntWritable)
 			context.write(key, result);
 		}
 	}

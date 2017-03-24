@@ -18,17 +18,21 @@ gs://dataproc-9ff91a0f-99d5-4d99-b3ae-4a0e23254573-us/dev_data
 gs://dataproc-9ff91a0f-99d5-4d99-b3ae-4a0e23254573-us/output1
 */
 /*
+	hadoop fs -mkdir -p /user/shurui91
 	JAVA_HOME is already set-up. Do not change this.
 	export PATH=${JAVA_HOME}/bin:${PATH}
 	export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+	env
+	hadoop fs -ls
 */
-public class InvertIndex {
+public class InvertedIndex {
 	/*
 	This is the Mapper class. It extends the Hadoop's Mapper class.
 	This maps input key/value pairs to a set of intermediate(output) key/value pairs.
 	Here our input key is a LongWritable and input value is a Text.
 	And the output key is a Text and value is an IntWritable.
 	*/
+	// <keyin, valuein, keyout, valueout>
 	public static class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
 		/*
 		Hadoop supported data types. This is a Hadoop specific datatype that is used to handle
@@ -42,9 +46,14 @@ public class InvertIndex {
 			2. for each docId, find those words;
 			3. reduce
 		*/
-		// equals to integer
-		// private static IntWritable docId = new IntWritable(1);
-
+		/*
+			james	51918182
+			james	51918182
+			james	51918182
+			people	51918182
+			of 		51918182
+			of 		51918182
+		*/
 		// equals to string
 		private Text word = new Text();
 		public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
@@ -67,6 +76,7 @@ public class InvertIndex {
 					'word2' docId
 				*/
 				// (key, values) for each document
+				// (Text, IntWritable)
 				context.write(word, docId);
 			}
 		}
@@ -79,12 +89,12 @@ public class InvertIndex {
 	Here our input key is a Text and input value is a IntWritable.
 	And the output key is a Text and value is an IntWritable.
 	*/
-	public static class IntSumReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
+	// <keyin, valuein, keyout, valueout>
+	public static class IntSumReducer extends Reducer<Text,IntWritable,Text,Text> {
 		// the values
-		private IntWritable result = new IntWritable();
+		private Text result = new Text();
 		public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
 			int sum = 0;
-			// <docId, count>
 			HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
 			// for one key, check to see if its docId exists
 			// if exists, add 1
@@ -100,8 +110,8 @@ public class InvertIndex {
 			}
 
 			// show hashmap result
-			// hmap.forEach((k, v) -> System.out.print(k + ": " + v));
-			result.set(hmap.forEach((k, v) -> System.out.print(k + ": " + v)));
+			result.set(hmap.toString());
+			// (Text, Text)
 			context.write(key, result);
 		}
 	}
@@ -115,7 +125,7 @@ public class InvertIndex {
 		// creating a Hadoop job and assigning a job name for identification.
 		Configuration conf = new Configuration();
 		Job job = Job.getInstance(conf, "inverted index");
-		job.setJarByClass(InvertIndex.class);
+		job.setJarByClass(InvertedIndex.class);
 
 		// the HDFS input and output directories to be fetched from the Dataproc job submission console.
 		FileInputFormat.addInputPath(job, new Path(args[0]));
@@ -128,7 +138,7 @@ public class InvertIndex {
 
 		// setting the job object with the data types of output key(Text) and value(IntWritable).
 		job.setOutputKeyClass(Text.class);
-		job.setOutputValueClass(IntWritable.class);
+		job.setOutputValueClass(Text.class);
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
 	}
 }
