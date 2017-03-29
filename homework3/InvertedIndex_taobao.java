@@ -29,11 +29,10 @@ hadoop fs -ls
 
 public class InvertedIndex {
 	public static class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
-		// private final static IntWritable one = new IntWritable(1);
+		private final static IntWritable one = new IntWritable(1);
 		private Text word = new Text();
 		public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
-			// every value means every file
-			/* String[] sp = value.toString().split(" ");
+			String[] sp = value.toString().split(" ");
 			if (sp.length >= 2) {
 				int docid = Integer.parseInt(sp[0]);
 				for (int i = 1; i < sp.length; ++i) {
@@ -41,23 +40,6 @@ public class InvertedIndex {
 					context.write(word, new IntWritable(docid));
 				}
 			}
-			*/
-			String line = value.toString();
-			StringTokenizer itr = new StringTokenizer(line);
-			ArrayList<String> sp = new ArrayList<String>();
-			
-			// put everything into the arraylist
-			while (itr.hasMoreTokens()) {
-				sp.add(itr.nextToken());
-			}
-			
-			// get the first element from the arraylist, docId
-			IntWritable docid = new IntWritable(Integer.parseInt(sp.get(0)));
-			for (int i = 1; i < sp.size(); i++) {
-				word.set(sp.get(i));
-				context.write(word, docid);
-			}
-
 		}
 	}
 
@@ -110,11 +92,8 @@ public class InvertedIndex {
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
 		// providing the mapper and reducer class names.
-		job.setMapOutputKeyClass(Text.class);
-		job.setMapOutputValueClass(IntWritable.class);
-		
 		job.setMapperClass(TokenizerMapper.class);
-		// job.setCombinerClass(IntSumReducer.class);
+		job.setCombinerClass(IntSumReducer.class);
 		job.setReducerClass(IntSumReducer.class);
 		
 		// setting the job object with the data types of output key(Text) and value(IntWritable).
