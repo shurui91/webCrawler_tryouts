@@ -17,7 +17,10 @@ import java.util.ArrayList;
 /*
 gs://dataproc-94d03919-b676-4893-a0f3-d5fd87e1b4d0-us/JAR/invertedindex.jar
 gs://dataproc-94d03919-b676-4893-a0f3-d5fd87e1b4d0-us/dev_data
+gs://dataproc-94d03919-b676-4893-a0f3-d5fd87e1b4d0-us/full_data
+gs://dataproc-94d03919-b676-4893-a0f3-d5fd87e1b4d0-us/bram
 gs://dataproc-94d03919-b676-4893-a0f3-d5fd87e1b4d0-us/output
+gs://dataproc-94d03919-b676-4893-a0f3-d5fd87e1b4d0-us/output2
 
 hadoop fs -mkdir -p /user/shurui91
 JAVA_HOME is already set-up. Do not change this.
