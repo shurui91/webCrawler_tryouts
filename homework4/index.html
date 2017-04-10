@@ -1,0 +1,45 @@
+<?php
+	// this is the PHP code sends user input to Solr
+
+	// make sure browsers see this page as utf-8 encoded HTML
+	header('Content-Type:text/html;charset=utf-8');		// return a webpage
+	$limit = 10;
+	$query = isset($_REQUEST['q']) ? $_REQUEST['q'] : false;
+	$results = false;
+
+	if ($query) {
+		require_once('Apache/Solr/Service.php');
+		// create a new solr service instance - host, port, and corename
+		// path (all defaults in this example)
+		$solor = new Apache_Solr_Service('localhost',8983,'/solr/core_name');
+		// if magic quotes is enabled then stripslashes will be needed
+		if (get_magic_quotes_gpc() == 1) {
+			$query = stripcslashes($query);
+		}
+
+		try {
+			$results = $solr->search($query,0,$limit);
+		}
+		catch {
+			die("<html>
+					<head>
+						<title>SEARCH EXCEPTION</title>
+					</head>
+					<body>
+						<pre>{$e->__toString()}</pre>
+					</body>
+				</html>");
+		}
+	}
+?>
+<html>
+<head>
+	<title>PHP Solr Client Example</title>
+</head>
+<body>
+	<form accept-charset="utf-8" method="get">
+		<label for="q">Search: </label>
+		<input id="q" type="" name="">
+	</form>
+</body>
+</html>
