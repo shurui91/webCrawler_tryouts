@@ -4,22 +4,29 @@
 	// make sure browsers see this page as utf-8 encoded HTML
 	header('Content-Type:text/html;charset=utf-8');		// return a webpage
 	$limit = 10;
+	// test for a query
 	$query = isset($_REQUEST['q']) ? $_REQUEST['q'] : false;
 	$results = false;
 
 	if ($query) {
+		// this is the Solr client library
 		require_once('Apache/Solr/Service.php');
 		// create a new solr service instance - host, port, and corename
-		// path (all defaults in this example)
-		$solor = new Apache_Solr_Service('localhost',8983,'/solr/core_name');
+		// path (all defaults in this example), Solr runs on port 8983
+		$solr = new Apache_Solr_Service('localhost',8983,'/solr/core_name');
+		
 		// if magic quotes is enabled then stripslashes will be needed
 		if (get_magic_quotes_gpc() == 1) {
+			// it handles quoting of special characters in query
 			$query = stripcslashes($query);
 		}
 
 		try {
+			// send query to solr
 			$results = $solr->search($query,0,$limit);
 		}
+
+		// catch any exception
 		catch {
 			die("<html>
 					<head>
@@ -32,14 +39,56 @@
 		}
 	}
 ?>
+<!-- create webpage output -->
 <html>
 <head>
 	<title>PHP Solr Client Example</title>
 </head>
 <body>
+	<!-- create input text box -->
 	<form accept-charset="utf-8" method="get">
 		<label for="q">Search: </label>
-		<input id="q" type="" name="">
+		<input id="q" name="q" type="text" value="<?php echo htmlspecialchars($query,ENT_QUOTES,'utf-8'); ?>" />
+		<!-- create submit button -->
+		<input type="submit" />
 	</form>
+	<!-- form ends here -->
+
+	<?php
+		// display results
+		if ($results) {
+			$total = (int) $results->response->numFound;
+			$start = min(1, $total);
+			$end = min($limit, $total);
+		}
+	?>
+	<div>Results <?php echo $start; ?> - <?php echo $end; ?> of <?php echo $total; ?>: </div>
+	<ol>
+		<?php
+			// iterate result documents
+			foreach ($results->response->docs as $doc) {
+		?>
+		<li>
+			<table style="border: 1px solid black; text-align: left">
+			<?php 
+				// iterative document fields / values
+				foreach ($docs as $field => $value) {
+			?>
+					<tr>
+						<th><?php echo htmlspecialchars($field,ENT_NOQUOTES,'utf-8'); ?></th>
+						<th><?php echo htmlspecialchars($value,ENT_NOQUOTES,'utf-8'); ?></th>
+					</tr>
+			<?php
+				}
+			?>
+			</table>
+		</li>
+		<?php 
+			} 
+		?>
+	</ol>
+	<?php
+		}
+	?>
 </body>
 </html>
