@@ -4,6 +4,8 @@ $query = isset($_REQUEST['q']) ? $_REQUEST['q'] : false;
 $results = false;
 
 if ($query) {
+	// the solr-php-client folder is in /var/www, this has to set correctly
+	// otherwise the code will not work
 	require_once('../solr-php-client/Apache/Solr/Service.php');
 	$solr = new Apache_Solr_Service('localhost', 8983, '/solr/hw4/');
 	if (get_magic_quotes_gpc() == 1) {
