@@ -9,8 +9,8 @@ def generatePageRank():
 		for url in hashmap[key]:
 			G.add_edge(key, url);
 
-	pr = nx.pagerank(G, alpha=0.85);
-	output = open("pagerank.txt", "w+");
+	pr = nx.pagerank(G, alpha=0.85, personalization=None, max_iter=30, tol=1e-06, nstart=None, weight='weight', dangling=None);
+	output = open("external_PageRank.txt", "w+");
 	for key in pr:
 		output.write("" + key + "=" + ("%.6f" % pr[key]) + "\n");
 	output.close();
@@ -20,7 +20,7 @@ def readFile():
 	filename = "edgelist.txt";
 	with open(filename, "r") as lines:
 		for line in lines:
-			urls = line.split(' ');
+			urls = line.split(" ");
 
 			if urls[0] not in hashmap:
 				hashmap[urls[0]] = [];
