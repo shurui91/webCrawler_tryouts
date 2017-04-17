@@ -12,7 +12,7 @@ def generatePageRank():
 	pr = nx.pagerank(G, alpha=0.85, personalization=None, max_iter=30, tol=1e-06, nstart=None, weight='weight', dangling=None);
 	output = open("external_PageRank.txt", "w+");
 	for key in pr:
-		output.write("/home/aaron/Downloads/solr-6.5.0/crawl_data/" + key + "=" + ("%.6f" % pr[key]) + "\n");
+		output.write("/home/aaron/Downloads/solr-6.5.0/crawl_data/" + key + "=" + ("%f" % pr[key]) + "\n");
 		# output.write("/" + key + "=" + ("%.6f" % pr[key]) + "\n");
 	output.close();
 
