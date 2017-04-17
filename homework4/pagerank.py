@@ -14,7 +14,6 @@ def generatePageRank():
 	for key in pr:
 		output.write("/home/aaron/Downloads/solr-6.5.0/crawl_data/" + key + "=" + ("%.6f" % pr[key]) + "\n");
 		# output.write("/" + key + "=" + ("%.6f" % pr[key]) + "\n");
-		# output.write("/home/aaron/Downloads/solr-6.5.0/crawl_data/" + key + "=" + ("%.6f" % pr[key]) + "\n");
 	output.close();
 
 def readFile():
