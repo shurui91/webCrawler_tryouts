@@ -12,7 +12,7 @@ def generatePageRank():
 	pr = nx.pagerank(G, alpha=0.85, personalization=None, max_iter=30, tol=1e-06, nstart=None, weight='weight', dangling=None);
 	output = open("external_PageRank.txt", "w+");
 	for key in pr:
-		output.write("/" + key + "=" + ("%f" % pr[key]) + "\n");
+		output.write("/home/aaron/Downloads/solr-6.5.0/crawl_data/" + key + "=" + ("%.6f" % pr[key]) + "\n");
 		# output.write("/home/aaron/Downloads/solr-6.5.0/crawl_data/" + key + "=" + ("%.6f" % pr[key]) + "\n");
 	output.close();
 
@@ -21,7 +21,8 @@ def readFile():
 	filename = "edgelist.txt";
 	with open(filename, "r") as lines:
 		for line in lines:
-			urls = line.split(" ");
+			# format is .html, space, .html
+			urls = line.split();
 
 			if urls[0] not in hashmap:
 				hashmap[urls[0]] = [];
