@@ -57,13 +57,15 @@ public class ExtractLinks {
 		// file counter
 		int i = 1;
 		for (File file : dir.listFiles()) {
-			// the 3rd parameter is URL
 			Document doc = Jsoup.parse(file, "UTF-8", fileUrlMap.get(file.getName()));
 			System.out.println(i++);
 			Elements links = doc.select("a[href]");
+			// Elements pngs = doc.select("[src]");
+			Element tag = doc.select("html").first();
+			String t = tag.text();
 			
 			for (Element link : links) {
-				String url = link.attr("abs:href").trim();
+				String url = link.attr("href").trim();
 				if (urlFileMap.containsKey(url)) {
 					String edge = file.getName() + " " + urlFileMap.get(url);
 					edges.add(edge);
