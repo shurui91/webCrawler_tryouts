@@ -65,7 +65,7 @@ public class ExtractLinks {
 			String t = tag.text();
 			
 			for (Element link : links) {
-				String url = link.attr("href").trim();
+				String url = link.attr("abs:href").trim();
 				if (urlFileMap.containsKey(url)) {
 					String edge = file.getName() + " " + urlFileMap.get(url);
 					edges.add(edge);
