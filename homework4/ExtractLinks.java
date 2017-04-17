@@ -20,8 +20,8 @@ public class ExtractLinks {
 		HashMap<String,String> urlFileMap = new HashMap<String,String>();
 		Set<String> edges = new HashSet<String>();
 
-		File csv = new File("mapABCNewsDataFile.csv");
-		File dir = new File("ABCNewsDownloadData");
+		File csv = new File("mapABCNewsDataFile.csv");	// 18782
+		File dir = new File("ABCNewsDownloadData");		// 18782
 
 		BufferedWriter writer = new BufferedWriter(new FileWriter("edgelist.txt"));
 		String delimeter = ",";
@@ -57,12 +57,10 @@ public class ExtractLinks {
 		// file counter
 		int i = 1;
 		for (File file : dir.listFiles()) {
+			// the 3rd parameter is URL
 			Document doc = Jsoup.parse(file, "UTF-8", fileUrlMap.get(file.getName()));
 			System.out.println(i++);
 			Elements links = doc.select("a[href]");
-			// Elements pngs = doc.select("[src]");
-			Element tag = doc.select("html").first();
-			String t = tag.text();
 			
 			for (Element link : links) {
 				String url = link.attr("abs:href").trim();
