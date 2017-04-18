@@ -20,7 +20,7 @@ if ($query) {
 	}
 	$param = [];
 	if (array_key_exists("pagerank", $_REQUEST)) {
-		$param['sort'] ="pagerank.txt desc";
+		$param['sort'] ="pageRankFile desc";
 	}
 	
 	try {
