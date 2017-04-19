@@ -59,7 +59,7 @@ if ($query) {
 		<?php foreach ($results->response->docs as $doc): ?>
 			<?php 
 				$id = $doc->id;
-				$url = substr($id, 21);
+				$url = $doc->og_url;
 				$url = urldecode($url);
 			?>
 			<a href="<?php echo $url; ?>">Document</a>
