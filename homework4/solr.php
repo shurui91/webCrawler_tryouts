@@ -24,8 +24,8 @@ if ($query) {
 	}
 	
 	try {
-		// $results = $solr->search($query, 0, $limit, $param);
-		$results = $solr->search($query, 0, $limit);
+		$results = $solr->search($query, 0, $limit, $param);
+		// $results = $solr->search($query, 0, $limit);
 	}
 	catch (Exception $e) {
 		die("<html><head><title>SEARCH EXCEPTION</title><body><pre>{$e->__toString()}</pre></body></html>");
