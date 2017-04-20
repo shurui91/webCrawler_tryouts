@@ -24,8 +24,8 @@ if ($query) {
 	}
 	
 	try {
-		// $results = $solr->search($query, 0, $limit, $param);
-		$results = $solr->search($query, 0, $limit);
+		$results = $solr->search($query, 0, $limit, $param);
+		// $results = $solr->search($query, 0, $limit);
 	}
 	catch (Exception $e) {
 		die("<html><head><title>SEARCH EXCEPTION</title><body><pre>{$e->__toString()}</pre></body></html>");
@@ -59,13 +59,17 @@ if ($query) {
 		<?php foreach ($results->response->docs as $doc): ?>
 			<?php 
 				$id = $doc->id;
-				$url = substr($id, 21);
+				$url = $doc->og_url;
 				$url = urldecode($url);
 			?>
-			<a href="<?php echo $url; ?>">Document</a>
-			<?php echo $doc->title ? $doc->title : "None"; ?>
+			<a href="<?php echo $url; ?>">URL</a>
+			<a><?php echo $doc->title ? $doc->title : "None"; ?></a>
 			<p>
 				Author: <?php echo $doc->author ? $doc->author : "None"; ?> | Size: <?php echo $doc->stream_size ? $doc->stream_size : "None"; ?>
+				| ID: <?php echo $doc->id ? $doc->id : "None"; ?>
+			</p>
+			<p>
+				Description: <?php echo $doc->description ? $doc->description : "None"; ?>
 			</p>
 			<hr>
 		<?php endforeach; ?>
