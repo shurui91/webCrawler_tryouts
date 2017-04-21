@@ -13,5 +13,10 @@
 
 ### In ```Solr-6.x.x/server/solr```, I have a folder called ```hw4```, which is the core I created for this project.
 ### Inside of ```hw4``` folder, there are two folders need to edit, ```conf``` and ```data```.
-* ```conf``` has all the configuration files we need for Solr.
-* ```data``` has the ```external_pageRankFile.txt``` that we need for the Page Rank Algorithm.
+* ```conf``` has all the configuration files we need for Solr. Two files need to edit.
+    * ```managed-schema```, need to edit this file based on the requirement.
+    * ```solrconfig.xml```, need to edit this file based on the requirement.
+* ```data``` is what I created, it has the ```external_pageRankFile.txt``` that we need for the Page Rank Algorithm.
+    * ```external_pageRankFile.txt``` comes from a Python code I wrote, ```pagerank.py```
+        * ```pagerank.py``` needs to read ```edgelist.txt``` and generate ```external_pageRankFile.txt```
+        * ```edgelist.txt``` comes from a Java code I wrote, ```ExtractLinks.java```. It uses Jsoup library.
