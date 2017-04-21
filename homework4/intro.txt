@@ -1,3 +1,0 @@
-Objectives
-	* Experience using Solr
-	* Investigating ranking strategies
