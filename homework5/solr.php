@@ -12,7 +12,7 @@ if ($query) {
 	require_once('../Apache/Solr/Service.php');
 	
 	// new solr service instance
-	$solr = new Apache_Solr_Service('localhost', 8983, '/solr/hw4/');
+	$solr = new Apache_Solr_Service('localhost', 8983, '/solr/myexample/');
 	
 	// if magic quotes is enabled then stripslashes will be needed
 	if (get_magic_quotes_gpc() == 1) {
